@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FGest%C3%A3o%20e%20manuten%C3%A7%C3%A3o%20da%20qualidade%20dos%20dados%20.pdf)

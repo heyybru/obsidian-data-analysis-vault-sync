@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FComputa%C3%A7%C3%A3o%20e%20Intelig%C3%AAncia%20Artificial%20.pdf) 

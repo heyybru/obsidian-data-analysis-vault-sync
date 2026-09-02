@@ -1,0 +1,1 @@
+[Material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FGovernan%C3%A7a%20corporativa%20em%20TI%20.pdf) 

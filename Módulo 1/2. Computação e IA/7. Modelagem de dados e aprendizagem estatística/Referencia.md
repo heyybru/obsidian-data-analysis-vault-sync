@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FModelagem%20de%20dados%20e%20aprendizagem%20estat%C3%ADstica%20.pdf) 

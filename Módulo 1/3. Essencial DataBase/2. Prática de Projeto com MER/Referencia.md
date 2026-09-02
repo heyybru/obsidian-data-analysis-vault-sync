@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FPr%C3%A1tica%20de%20Projeto%20de%20Banco%20de%20Dados%20com%20MER%20.pdf) 

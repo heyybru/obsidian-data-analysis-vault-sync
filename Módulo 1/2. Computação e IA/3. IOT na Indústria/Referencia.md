@@ -1,0 +1,1 @@
+[Material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FIOT%20na%20Industria.pdf) 

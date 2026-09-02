@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FFun%C3%A7%C3%B5es%20hash%20e%20Blockchain.pdf) 

@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FConceitos%20fundamentais%20em%20Machine%20Learning%20.pdf) 

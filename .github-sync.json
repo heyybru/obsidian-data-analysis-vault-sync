@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "remote": "git@github.com:heyybru/obsidian-remote-vault-sync.git",
+  "branch": "main",
+  "sync": {
+    "autoIntervalMin": 30,
+    "ignorePatterns": [
+      ".DS_Store",
+      ".trash/**",
+      ".obsidian/**"
+    ]
+  },
+  "ai": {
+    "enabled": true,
+    "silentMode": false,
+    "silentMinConfidence": 3,
+    "providers": [],
+    "activeProvider": "",
+    "mergeInstructions": "",
+    "openaiModel": "gpt-5.5",
+    "geminiModel": "gemini-2.5-flash",
+    "claudeModel": "claude-sonnet-4-5",
+    "deepseekModel": "deepseek-chat",
+    "sendFilePaths": true,
+    "sendGitMetadata": true,
+    "sendSurroundingContext": true,
+    "excludePatterns": [
+      ".env",
+      ".env.*",
+      "secrets/**",
+      "*.private.md",
+      "private/**",
+      "**/credentials.*"
+    ]
+  },
+  "submodules": []
+}
