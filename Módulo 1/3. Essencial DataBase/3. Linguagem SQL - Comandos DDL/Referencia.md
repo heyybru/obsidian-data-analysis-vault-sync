@@ -1,1 +1,1 @@
-[material](obsidian://open?vault=Analise%20de%20Dados&file=img%2FLinguagem%20SQL%20-%20Comandos%20DDL%20.pdf)
+[material](obsidian://open?vault=Po%CC%81s-Analise%20de%20Dados&file=img%2FM%C3%B3dulo%201%2F3.%20Essencial%20DataBase%2FLinguagem%20SQL%20-%20Comandos%20DDL%20.pdf) 

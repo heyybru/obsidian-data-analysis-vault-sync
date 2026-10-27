@@ -12,8 +12,9 @@ ESCOLHA as colunas que você quer ver   →  SELECT
 DE dentro da tabela onde elas moram    →  FROM
 */
 
-SELECT* -- Use o `*` (asterisco) para ver todas as colunas de uma tabela. Ele significa "tudo".
+-- Use o `*` (asterisco) para ver todas as colunas de uma tabela. Ele significa "tudo".
 FROM CATEGORIES;
+SELECT* 
 
 SELECT* -- `SELECT company_name` → "quero ver a coluna **company_name**" (nome da empresa do cliente).
 FROM CUSTOMERS; -- `FROM customers` → "de onde? Da tabela **customers**" (clientes).
