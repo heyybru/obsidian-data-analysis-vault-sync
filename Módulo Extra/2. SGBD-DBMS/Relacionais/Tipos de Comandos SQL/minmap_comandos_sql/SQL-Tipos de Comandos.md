@@ -7,6 +7,8 @@ tags:
   - postgresql
   - revisao
   - obsidian
+aliases:
+cssclasses:
 ---
 
 # Tipos de Comandos SQL
@@ -24,7 +26,6 @@ tags:
 - **DCL** decide quem tem a chave (permissões)
 
 ---
-
 ## 1. DQL — Consultas (ler)
 
 > [!note] O que é
