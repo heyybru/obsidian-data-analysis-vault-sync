@@ -1,8 +1,12 @@
 ---
-titulo: "Tipos de Comandos SQL"
-modulo: "Revisão Geral"
+titulo: Tipos de Comandos SQL
+modulo: Revisão Geral
 data: 2026-10-28
-tags: [sql, postgresql, revisao, obsidian]
+tags:
+  - sql
+  - postgresql
+  - revisao
+  - obsidian
 ---
 
 # Tipos de Comandos SQL
@@ -162,11 +166,3 @@ tags: [sql, postgresql, revisao, obsidian]
 | DDL | Criar/destruir estrutura | CREATE, ALTER, DROP, TRUNCATE |
 | DCL | Controlar permissões | GRANT, REVOKE |
 | TCL | Gerenciar transações | BEGIN, COMMIT, ROLLBACK, SAVEPOINT |
-
-## 🔗 Notas relacionadas
-
-- [[01-DQL-Consultas/SELECT e FROM|SELECT e FROM]]
-- [[01-DQL-Consultas/WHERE - Filtros|WHERE - Filtros]]
-- [[06-Agregacoes/GROUP BY|GROUP BY]]
-- [[02-DML-Dados/INSERT INTO|INSERT INTO]]
-- [[03-DDL-Estrutura/CREATE TABLE|CREATE TABLE]]

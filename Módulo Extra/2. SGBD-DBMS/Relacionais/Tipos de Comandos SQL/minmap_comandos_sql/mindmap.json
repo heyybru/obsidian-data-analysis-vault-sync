@@ -1,0 +1,332 @@
+{
+  "colorOverridesByNodeId": {},
+  "mindmap": {
+    "version": "1",
+    "title": "Tipos de Comandos SQL",
+    "layoutMode": "distributed",
+    "tree": {
+      "id": "sql-commands",
+      "label": "Tipos de Comandos SQL",
+      "children": [
+        {
+          "id": "dql",
+          "label": "DQL — Consultas (ler)",
+          "children": [
+            {
+              "id": "select-main",
+              "label": "SELECT — comando principal",
+              "children": [
+                {
+                  "id": "select-syntax",
+                  "label": "Sintaxe: SELECT colunas FROM tabela;"
+                },
+                {
+                  "id": "select-pseudo",
+                  "label": "Pseudocódigo: ESCOLHA as colunas DE dentro da tabela"
+                },
+                {
+                  "id": "select-ex",
+                  "label": "Ex.: SELECT company_name FROM customers;"
+                }
+              ]
+            },
+            {
+              "id": "select-clauses",
+              "label": "Cláusulas do SELECT",
+              "children": [
+                {
+                  "id": "where",
+                  "label": "WHERE — filtrar linhas"
+                },
+                {
+                  "id": "groupby",
+                  "label": "GROUP BY — agrupar por coluna"
+                },
+                {
+                  "id": "having",
+                  "label": "HAVING — filtrar grupos"
+                },
+                {
+                  "id": "orderby",
+                  "label": "ORDER BY — ordenar (ASC/DESC)"
+                },
+                {
+                  "id": "limit",
+                  "label": "LIMIT — limitar linhas"
+                },
+                {
+                  "id": "distinct",
+                  "label": "DISTINCT — valores únicos"
+                }
+              ]
+            },
+            {
+              "id": "joins",
+              "label": "JOIN — combinar tabelas",
+              "children": [
+                {
+                  "id": "inner-join",
+                  "label": "INNER JOIN — só o que existe nas duas"
+                },
+                {
+                  "id": "left-join",
+                  "label": "LEFT JOIN — tudo da esquerda + o que casar"
+                },
+                {
+                  "id": "right-join",
+                  "label": "RIGHT JOIN — tudo da direita + o que casar"
+                },
+                {
+                  "id": "full-join",
+                  "label": "FULL JOIN — tudo das duas"
+                }
+              ]
+            },
+            {
+              "id": "subqueries",
+              "label": "Subqueries — consulta dentro de consulta"
+            }
+          ]
+        },
+        {
+          "id": "dml",
+          "label": "DML — Manipulação de dados",
+          "children": [
+            {
+              "id": "insert",
+              "label": "INSERT — adicionar",
+              "children": [
+                {
+                  "id": "insert-syntax",
+                  "label": "Sintaxe: INSERT INTO tabela (col) VALUES (val);"
+                },
+                {
+                  "id": "insert-pseudo",
+                  "label": "Pseudocódigo: ADICIONE uma linha com estes valores"
+                },
+                {
+                  "id": "insert-ex",
+                  "label": "Ex.: INSERT INTO categories (name) VALUES ('Bebidas');"
+                }
+              ]
+            },
+            {
+              "id": "update",
+              "label": "UPDATE — alterar",
+              "children": [
+                {
+                  "id": "update-syntax",
+                  "label": "Sintaxe: UPDATE tabela SET col = val WHERE cond;"
+                },
+                {
+                  "id": "update-pseudo",
+                  "label": "Pseudocódigo: ALTERE os valores ONDE a condição for verdadeira"
+                },
+                {
+                  "id": "update-warn",
+                  "label": "⚠️ SEM WHERE altera a tabela inteira"
+                }
+              ]
+            },
+            {
+              "id": "delete",
+              "label": "DELETE — remover",
+              "children": [
+                {
+                  "id": "delete-syntax",
+                  "label": "Sintaxe: DELETE FROM tabela WHERE cond;"
+                },
+                {
+                  "id": "delete-pseudo",
+                  "label": "Pseudocódigo: REMOVA as linhas ONDE a condição for verdadeira"
+                },
+                {
+                  "id": "delete-warn",
+                  "label": "⚠️ SEM WHERE apaga tudo"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ddl",
+          "label": "DDL — Definição de estrutura",
+          "children": [
+            {
+              "id": "create",
+              "label": "CREATE — criar",
+              "children": [
+                {
+                  "id": "create-table",
+                  "label": "CREATE TABLE — cria tabela"
+                },
+                {
+                  "id": "create-db",
+                  "label": "CREATE DATABASE — cria banco"
+                },
+                {
+                  "id": "create-view",
+                  "label": "CREATE VIEW — cria visão"
+                },
+                {
+                  "id": "create-index",
+                  "label": "CREATE INDEX — cria índice"
+                }
+              ]
+            },
+            {
+              "id": "alter",
+              "label": "ALTER — modificar",
+              "children": [
+                {
+                  "id": "add-col",
+                  "label": "ADD COLUMN — adiciona coluna"
+                },
+                {
+                  "id": "drop-col",
+                  "label": "DROP COLUMN — remove coluna"
+                },
+                {
+                  "id": "rename",
+                  "label": "RENAME — renomeia"
+                }
+              ]
+            },
+            {
+              "id": "drop",
+              "label": "DROP — remover estrutura",
+              "children": [
+                {
+                  "id": "drop-table",
+                  "label": "DROP TABLE — apaga tabela e dados"
+                },
+                {
+                  "id": "drop-db",
+                  "label": "DROP DATABASE — apaga banco"
+                },
+                {
+                  "id": "drop-view",
+                  "label": "DROP VIEW — apaga visão"
+                }
+              ]
+            },
+            {
+              "id": "truncate",
+              "label": "TRUNCATE — esvaziar",
+              "children": [
+                {
+                  "id": "trunc-desc",
+                  "label": "Apaga todas as linhas, mantém a estrutura"
+                },
+                {
+                  "id": "trunc-perf",
+                  "label": "Mais rápido que DELETE sem WHERE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dcl",
+          "label": "DCL — Controle de acesso",
+          "children": [
+            {
+              "id": "grant",
+              "label": "GRANT — dar permissão",
+              "children": [
+                {
+                  "id": "grant-syntax",
+                  "label": "Sintaxe: GRANT permissão ON objeto TO usuário;"
+                },
+                {
+                  "id": "grant-ex",
+                  "label": "Ex.: GRANT SELECT ON products TO analista;"
+                }
+              ]
+            },
+            {
+              "id": "revoke",
+              "label": "REVOKE — remover permissão",
+              "children": [
+                {
+                  "id": "revoke-syntax",
+                  "label": "Sintaxe: REVOKE permissão ON objeto FROM usuário;"
+                },
+                {
+                  "id": "revoke-ex",
+                  "label": "Ex.: REVOKE DELETE ON products FROM analista;"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tcl",
+          "label": "TCL — Controle de transações",
+          "children": [
+            {
+              "id": "begin",
+              "label": "BEGIN — iniciar transação"
+            },
+            {
+              "id": "commit",
+              "label": "COMMIT — confirmar mudanças",
+              "children": [
+                {
+                  "id": "commit-desc",
+                  "label": "Torna as mudanças permanentes"
+                }
+              ]
+            },
+            {
+              "id": "rollback",
+              "label": "ROLLBACK — desfazer",
+              "children": [
+                {
+                  "id": "rollback-desc",
+                  "label": "Volta ao estado anterior ao BEGIN"
+                }
+              ]
+            },
+            {
+              "id": "savepoint",
+              "label": "SAVEPOINT — ponto de restauração",
+              "children": [
+                {
+                  "id": "savepoint-desc",
+                  "label": "Permite desfazer só parte da transação"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "analogy",
+          "label": "Analogia da casa",
+          "children": [
+            {
+              "id": "ana-ddl",
+              "label": "DDL constrói a casa (estrutura)"
+            },
+            {
+              "id": "ana-dml",
+              "label": "DML coloca os móveis (dados)"
+            },
+            {
+              "id": "ana-dql",
+              "label": "DQL pergunta o que tem (leitura)"
+            },
+            {
+              "id": "ana-tcl",
+              "label": "TCL é o salvar/desfazer (transações)"
+            },
+            {
+              "id": "ana-dcl",
+              "label": "DCL decide quem tem a chave (permissões)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
