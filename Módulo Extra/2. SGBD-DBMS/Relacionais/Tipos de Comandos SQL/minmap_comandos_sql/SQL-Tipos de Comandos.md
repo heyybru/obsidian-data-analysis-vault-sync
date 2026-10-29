@@ -10,6 +10,8 @@ tags:
 aliases:
 cssclasses:
 ---
+```markdown
+
 
 # Tipos de Comandos SQL
 
@@ -168,3 +170,6 @@ cssclasses:
 | DDL | Criar/destruir estrutura | CREATE, ALTER, DROP, TRUNCATE |
 | DCL | Controlar permissões | GRANT, REVOKE |
 | TCL | Gerenciar transações | BEGIN, COMMIT, ROLLBACK, SAVEPOINT |
+
+```
+
