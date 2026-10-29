@@ -26,6 +26,7 @@ cssclasses:
 - **DCL** decide quem tem a chave (permissões)
 
 ---
+
 ## 1. DQL — Consultas (ler)
 
 > [!note] O que é
