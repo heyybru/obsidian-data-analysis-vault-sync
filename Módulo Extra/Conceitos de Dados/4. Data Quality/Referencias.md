@@ -2,4 +2,5 @@
 2. [What is Data Quality? Why is it important?]( https://www.youtube.com/watch?v=1vNGDnLSzvY)
 3. [Data Quality in Six Dimensions](https://www.youtube.com/watch?v=1nJy0A3EwI4)
 4. [What's Data Quality?](https://www.ibm.com/think/topics/data-quality)
-5. # Data Quality: o que é e como garantir dados confiáveis
+5. [Data Quality: o que é e como garantir dados confiáveis](https://www.alura.com.br/artigos/qualidades-dos-dados?srsltid=AYCX9vIPHgj1M2M0awKR8DC7ctKIkjRxED69acZiLRUDbxMgl1kP9aW8)
+6. [What is Data Quality?](https://www.databricks.com/blog/what-is-data-quality)
