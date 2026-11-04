@@ -2,14 +2,13 @@
 tags: [moc, dados]
 tipo: mapa-de-conteudo
 ---
-
 # 🗂️ Hub — Governança de Dados
 
 ## Pastas
 
-- [[1. Data Quality]]
-- [[00 - Data Integrity (MOC)]]
-- [[00 - Data Profiling (MOC)]]
+- [[00. Data Quality (MOC)]]
+- [[00. Data Integrity (MOC)]]
+- [[00. Data Profiling (MOC)]]
 
 ## Como se conectam
 
