@@ -7,7 +7,7 @@ tipo: mapa-de-conteudo
 
 ## Pastas
 
-- [[00 - Data Quality (MOC)]]
+- [[1. Data Quality]]
 - [[00 - Data Integrity (MOC)]]
 - [[00 - Data Profiling (MOC)]]
 
