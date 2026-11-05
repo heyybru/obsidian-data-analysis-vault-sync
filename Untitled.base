@@ -1,9 +1,0 @@
-views:
-  - type: table
-    name: Table
-    order:
-      - file.name
-      - file.backlinks
-      - file.ctime
-      - file.size
-      - file.folder
