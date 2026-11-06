@@ -12,7 +12,7 @@
 - Nomeie as consultas com o número do módulo: `M02-SELECT-LIMIT.md`.
 - Use comentários nos blocos SQL (`-- explicação`) para lembrar o propósito.
 
-Templates Crie um template de nota de consulta no Obsidian:
+Templates: Crie um template de nota de consulta no Obsidian:
 
 ```markdown
 modulo: "Módulo {{title}}"
