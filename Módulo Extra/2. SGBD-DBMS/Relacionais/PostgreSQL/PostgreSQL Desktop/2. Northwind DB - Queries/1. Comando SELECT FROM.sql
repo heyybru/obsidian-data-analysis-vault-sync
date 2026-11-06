@@ -1,3 +1,4 @@
+```sql
 -- Aula 1: SELECT FROM - Selecionando dados das tabelas
 
 /*
@@ -50,3 +51,4 @@ de múltiplas linhas
 SELECT * FROM products
 
 */
+```
