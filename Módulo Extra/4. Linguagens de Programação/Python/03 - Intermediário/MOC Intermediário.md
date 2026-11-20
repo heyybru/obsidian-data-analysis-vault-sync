@@ -1,7 +1,7 @@
 ---
 tipo: moc
 area: python
-fase: "3"
+fase: 3 4
 tags:
   - moc
   - python
