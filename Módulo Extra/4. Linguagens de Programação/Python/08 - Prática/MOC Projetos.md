@@ -1,41 +1,31 @@
 ---
 tipo: moc
 area: python
-fase: N
-tags: [moc, python]
+fase: pratica
+tags: [moc, python, rh]
 ---
 
-# MOC — NomeDaFase
+# MOC — Projetos e RH
 
-## Todas as notas da pasta
+## Projetos do curso
 
 ​```dataview
 TABLE WITHOUT ID
   file.link AS "Nota",
-  status AS "Status",
-  file.mtime AS "Editada"
-FROM "01 - Fundamentos"
+  status AS "Status"
+FROM ""
+WHERE contains(file.name, "Projeto")
 SORT file.name ASC
 ​```
 
-## Pendentes
-
-​```dataview
-LIST WITHOUT ID file.link
-FROM "01 - Fundamentos"
-WHERE status != "concluído"
-SORT file.name ASC
-​```
-
-## Situação geral
+## Aplicações de RH
 
 ​```dataview
 TABLE WITHOUT ID
-  status AS "Status",
-  length(rows) AS "Notas"
-FROM "01 - Fundamentos"
-GROUP BY status
-SORT status ASC
+  file.link AS "Nota",
+  status AS "Status"
+FROM "06 - RH e Dados"
+SORT file.name ASC
 ​```
 
 Links: [[MOC Trilha Geral]]
