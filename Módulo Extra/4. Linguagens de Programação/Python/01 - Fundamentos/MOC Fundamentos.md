@@ -1,8 +1,10 @@
 ---
 tipo: moc
 area: python
-fase: N
-tags: [moc, python]
+fase: "1"
+tags:
+  - moc
+  - python
 ---
 
 # MOC — NomeDaFase

@@ -1,8 +1,10 @@
 ---
 tipo: moc
 area: python
-fase: N
-tags: [moc, python]
+fase: "3"
+tags:
+  - moc
+  - python
 ---
 
 # MOC — NomeDaFase
@@ -36,6 +38,16 @@ TABLE WITHOUT ID
 FROM "01 - Fundamentos"
 GROUP BY status
 SORT status ASC
+​```
+
+## Feature Engineering
+
+​```dataview
+TABLE WITHOUT ID
+  file.link AS "Nota",
+  status AS "Status"
+FROM "03 - Intermediário/Feature Engineering"
+SORT file.name ASC
 ​```
 
 Links: [[MOC Trilha Geral]]

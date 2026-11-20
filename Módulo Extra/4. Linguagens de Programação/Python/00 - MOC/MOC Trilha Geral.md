@@ -4,7 +4,6 @@ area: python
 tags: [moc, python]
 atualizado: 2026-11-19
 ---
-
 # MOC — Trilha Geral
 
 Painel de entrada do vault. Progresso, pendências e atalhos para cada fase.
@@ -23,7 +22,6 @@ FROM "01 - Fundamentos" OR "02 - Básico" OR "03 - Intermediário"
 GROUP BY file.folder
 SORT key ASC
 ​```
-
 ## Notas por status
 
 ​```dataview
