@@ -49,6 +49,91 @@ df.sample(10)             # amostra aleatória
 df.isna().sum()           # nulos por coluna
 df.nunique()              # valores distintos por coluna
 ```
+
+**3. T — Limpar colunas e nulos**
+
+```python
+df = df.drop(columns=["coluna_inutil"])
+df = df.dropna(subset=["Loja"])
+df = df.drop_duplicates(subset=["ID_Pedido"], keep="first")
+df["Loja"] = df["Loja"].fillna("Online")
+```
+
+As quatro técnicas de imputação, e quando cada uma vale:
+
+| Técnica   | Use quando                          | Código                        |
+| --------- | ----------------------------------- | ----------------------------- |
+| Média     | distribuição simétrica, sem outlier | df[c].fillna(df[c].mean())    |
+| Mediana   | há outlier (salário, valor)         | df[c].fillna(df[c].median())  |
+| Moda      | variável categórica                 | df[c].fillna(df[c].mode()[0]) |
+| Descartar | mais de 30% vazio                   | df.dropna(subset=[c])         |
+
+**4. T — Tipos e texto**
+
+```python 
+df["Data"] = pd.to_datetime(df["Data"], format="%Y-%m-%d")
+df["CEP"] = df["CEP"].astype(str)
+df["Loja"] = df["Loja"].str.strip().str.title()
+df["Email"] = df["Email"].str.lower()
+```
+
+format mais usados: %Y-%m-%d (2026-11-19), %d/%m/%Y (19/11/2026), %m-%d-%Y (padrão americano).
+
+Cuidado: %m é mês e %M é minuto. Trocar os dois quebra a conversão silenciosamente.
+
+**5. T — Criar e transformar colunas**
+
+```python 
+df["Faturamento"] = df["Qtd"] * df["Preco_Unitario"]
+df["Forma"] = np.where(df["Loja"] == "Online", "Online", "Presencial")
+df["Regiao"] = df["Loja"].map({"São Paulo": "Sudeste", "Curitiba": "Sul"})
+df["Receita"] = df["Receita"].apply(lambda x: x * 1.1)
+df = df.assign(Margem=lambda d: d["Lucro"] / d["Faturamento"])
+```
+
+**6. T — Filtrar e selecionar**
+
+```python 
+df["Loja"]                          # Series
+df[["Loja", "Cliente"]]             # DataFrame
+df.filter(items=["Loja", "Qtd"])    # por nome de coluna
+df.filter(like="Vend")              # por parte do nome
+
+df.loc[3, "Loja"]                   # por rótulo
+df.iloc[3, 1]                       # por posição
+df.set_index("Loja", inplace=True)  # vira índice
+
+cond = df["Faturamento"] > 1000
+df[cond]                            # filtro condicional
+df[(df["Regiao"] == "Sul") & (df["Qtd"] > 5)]
+df[(df["Loja"] == "Online") | (df["Loja"] == "Recife")]
+df[df["Data"].dt.year == 2026]
+df[df["Data"] >= "2026-01-01"]
+```
+
+**7. T — Ordenar e agrupar**
+
+```python 
+df = df.sort_values(by="Data").reset_index(drop=True)
+df = df.sort_values(by=["Data", "Faturamento"], ascending=[True, False])
+
+df.groupby("Loja")["Faturamento"].sum()
+df.groupby(["Loja", "Produto"])["Faturamento"].sum().reset_index()
+df.groupby("Loja").agg(Total=("Faturamento", "sum"), Ticket=("Faturamento", "mean"))
+df.nlargest(5, "Faturamento")
+```
+
+**8. T — Juntar bases**
+
+```python 
+df_meta = df_meta.merge(df_gerentes, on="Loja", how="left")
+df_meta = df_meta.merge(outra, left_on="Loja", right_on="Cidade", how="inner")
+```
+
+
+
+
+
 ## Essencial
 
 ## Pegadinhas
