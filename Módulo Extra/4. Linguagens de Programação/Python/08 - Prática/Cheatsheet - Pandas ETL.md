@@ -164,6 +164,37 @@ encoding="utf-8-sig" é o que evita o Excel abrir com acento quebrado.
 
 **Sequência que funciona**
 
+```python 
+# 1. carregar
+df = pd.read_csv("vendas.csv", sep=";", encoding="latin-1", low_memory=False)
+
+# 2. copiar antes de tratar
+df_analise = df.copy()
+
+# 3. inspecionar
+df_analise.info()
+df_analise.isna().sum()
+
+# 4. limpar
+df_analise = df_analise.drop(columns=["Data_Base"])
+df_analise["Loja"] = df_analise["Loja"].fillna("Online").str.strip().str.title()
+df_analise["Data"] = pd.to_datetime(df_analise["Data"], format="%Y-%m-%d")
+df_analise = df_analise.drop_duplicates()
+
+# 5. enriquecer
+df_analise["Faturamento"] = df_analise["Qtd"] * df_analise["Preco_Unitario"]
+
+# 6. analisar
+ranking = (
+    df_analise.groupby("Loja")["Faturamento"]
+    .sum()
+    .reset_index()
+    .sort_values("Faturamento", ascending=False)
+)
+
+# 7. exportar
+ranking.to_csv("ranking_lojas.csv", index=False)
+```
 
 ## Pegadinhas
 
