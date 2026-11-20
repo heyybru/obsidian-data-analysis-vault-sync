@@ -7,7 +7,7 @@ tags:
   - python
 ---
 
-# MOC — NomeDaFase
+# MOC — Sintaxe
 
 ## Todas as notas da pasta
 
