@@ -1,0 +1,67 @@
+---
+tipo: moc
+area: python
+fase: pratica
+tags: [moc, python, rh]
+atualizado: 2026-11-19
+---
+
+# MOC — Projetos e RH
+
+## Projetos do curso
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS "Nota",
+  status AS "Status"
+FROM ""
+WHERE contains(file.name, "Projeto")
+SORT file.name ASC
+```
+
+## Aplicações de RH por área
+
+```dataview
+TABLE WITHOUT ID
+  key AS "Área de RH",
+  length(rows) AS "Notas",
+  length(filter(rows.status, (s) => s = "concluído")) AS "Feitas"
+FROM "06 - RH e Dados"
+GROUP BY area_rh
+SORT key ASC
+```
+
+## Aplicações por tipo de vaga
+
+```dataview
+TABLE WITHOUT ID
+  key AS "Tipo de vaga",
+  length(rows) AS "Notas"
+FROM "06 - RH e Dados"
+WHERE tipo_vaga
+GROUP BY tipo_vaga
+SORT length(rows) DESC
+```
+
+## Todas as aplicações de RH
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS "Nota",
+  area_rh AS "Área",
+  tipo_vaga AS "Vaga",
+  status AS "Status"
+FROM "06 - RH e Dados"
+SORT area_rh ASC, file.name ASC
+```
+
+## Pendentes de RH
+
+```dataview
+LIST WITHOUT ID file.link
+FROM "06 - RH e Dados"
+WHERE status != "concluído"
+SORT file.name ASC
+```
+
+Links: [[MOC Trilha Geral]]

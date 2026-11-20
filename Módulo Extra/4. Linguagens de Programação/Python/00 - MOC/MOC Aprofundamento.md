@@ -1,0 +1,42 @@
+---
+tipo: moc
+area: python
+fase: 6
+tags: [moc, python]
+atualizado: 2026-11-19
+---
+
+# MOC — Aprofundamento
+
+## Notas da pasta
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS "Nota",
+  status AS "Status",
+  file.mtime AS "Editada"
+FROM "05 - Aprofundamento"
+SORT file.name ASC
+```
+
+## Pendentes
+
+```dataview
+LIST WITHOUT ID file.link
+FROM "05 - Aprofundamento"
+WHERE status != "concluído"
+SORT file.name ASC
+```
+
+## Situação da fase
+
+```dataview
+TABLE WITHOUT ID
+  status AS "Status",
+  length(rows) AS "Notas"
+FROM "05 - Aprofundamento"
+GROUP BY status
+SORT status ASC
+```
+
+Links: [[MOC Trilha Geral]]

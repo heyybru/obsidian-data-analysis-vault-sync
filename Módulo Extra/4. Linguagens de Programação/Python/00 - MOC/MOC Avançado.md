@@ -1,0 +1,42 @@
+---
+tipo: moc
+area: python
+fase: 5
+tags: [moc, python]
+atualizado: 2026-11-19
+---
+
+# MOC — Avançado
+
+## Notas da pasta
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS "Nota",
+  status AS "Status",
+  file.mtime AS "Editada"
+FROM "04 - Avançado"
+SORT file.name ASC
+```
+
+## Pendentes
+
+```dataview
+LIST WITHOUT ID file.link
+FROM "04 - Avançado"
+WHERE status != "concluído"
+SORT file.name ASC
+```
+
+## Situação da fase
+
+```dataview
+TABLE WITHOUT ID
+  status AS "Status",
+  length(rows) AS "Notas"
+FROM "04 - Avançado"
+GROUP BY status
+SORT status ASC
+```
+
+Links: [[MOC Trilha Geral]]
