@@ -1,7 +1,7 @@
 ---
 tipo: moc
 area: python
-fase: 3 4
+fase: "3"
 tags:
   - moc
   - python
@@ -24,7 +24,7 @@ SORT file.name ASC
 
 ​```dataview
 LIST WITHOUT ID file.link
-FROM "01 - Fundamentos"
+FROM "03 - Intermediário"
 WHERE status != "concluído"
 SORT file.name ASC
 ​```
@@ -35,7 +35,7 @@ SORT file.name ASC
 TABLE WITHOUT ID
   status AS "Status",
   length(rows) AS "Notas"
-FROM "01 - Fundamentos"
+FROM "03 - Intermediário"
 GROUP BY status
 SORT status ASC
 ​```

@@ -16,7 +16,7 @@ TABLE WITHOUT ID
   file.link AS "Nota",
   status AS "Status",
   file.mtime AS "Editada"
-FROM "01 - Fundamentos"
+FROM "02 - Básico"
 SORT file.name ASC
 ​```
 
@@ -24,7 +24,7 @@ SORT file.name ASC
 
 ​```dataview
 LIST WITHOUT ID file.link
-FROM "01 - Fundamentos"
+FROM "02 - Básico"
 WHERE status != "concluído"
 SORT file.name ASC
 ​```
@@ -35,7 +35,7 @@ SORT file.name ASC
 TABLE WITHOUT ID
   status AS "Status",
   length(rows) AS "Notas"
-FROM "01 - Fundamentos"
+FROM "02 - Básico"
 GROUP BY status
 SORT status ASC
 ​```
