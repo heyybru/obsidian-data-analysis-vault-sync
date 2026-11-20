@@ -16,7 +16,7 @@ import pandas as pd
 import numpy as np
 ```
 
-**1. E — Extrair**
+### **1. E — Extrair**
 
 ```python
 df = pd.read_csv("dados.csv", sep=";", encoding="latin-1", low_memory=False)
@@ -37,7 +37,7 @@ Parâmetros que resolvem 90% dos problemas de leitura:
 | dtype       | CEP ou matrícula virou número  | {"CEP": str}                |
 | parse_dates | coluna de data veio como texto | ["Data"]                    |
 | skiprows    | cabeçalho começa na linha 3    | skiprows=2                  |
-**2. T — Inspecionar antes de mexer**
+### **2. T — Inspecionar antes de mexer**
 
 ```python 
 df.shape                  # (linhas, colunas) — sem parênteses
@@ -50,7 +50,7 @@ df.isna().sum()           # nulos por coluna
 df.nunique()              # valores distintos por coluna
 ```
 
-**3. T — Limpar colunas e nulos**
+### **3. T — Limpar colunas e nulos**
 
 ```python
 df = df.drop(columns=["coluna_inutil"])
@@ -67,8 +67,7 @@ As quatro técnicas de imputação, e quando cada uma vale:
 | Mediana   | há outlier (salário, valor)         | df[c].fillna(df[c].median())  |
 | Moda      | variável categórica                 | df[c].fillna(df[c].mode()[0]) |
 | Descartar | mais de 30% vazio                   | df.dropna(subset=[c])         |
-
-**4. T — Tipos e texto**
+### **4. T — Tipos e texto**
 
 ```python 
 df["Data"] = pd.to_datetime(df["Data"], format="%Y-%m-%d")
@@ -81,7 +80,7 @@ format mais usados: %Y-%m-%d (2026-11-19), %d/%m/%Y (19/11/2026), %m-%d-%Y (padr
 
 Cuidado: %m é mês e %M é minuto. Trocar os dois quebra a conversão silenciosamente.
 
-**5. T — Criar e transformar colunas**
+### **5. T — Criar e transformar colunas**
 
 ```python 
 df["Faturamento"] = df["Qtd"] * df["Preco_Unitario"]
@@ -91,7 +90,7 @@ df["Receita"] = df["Receita"].apply(lambda x: x * 1.1)
 df = df.assign(Margem=lambda d: d["Lucro"] / d["Faturamento"])
 ```
 
-**6. T — Filtrar e selecionar**
+### **6. T — Filtrar e selecionar**
 
 ```python 
 df["Loja"]                          # Series
@@ -111,7 +110,7 @@ df[df["Data"].dt.year == 2026]
 df[df["Data"] >= "2026-01-01"]
 ```
 
-**7. T — Ordenar e agrupar**
+### **7. T — Ordenar e agrupar**
 
 ```python 
 df = df.sort_values(by="Data").reset_index(drop=True)
@@ -123,20 +122,63 @@ df.groupby("Loja").agg(Total=("Faturamento", "sum"), Ticket=("Faturamento", "mea
 df.nlargest(5, "Faturamento")
 ```
 
-**8. T — Juntar bases**
+### **8. T — Juntar bases**
 
 ```python 
 df_meta = df_meta.merge(df_gerentes, on="Loja", how="left")
 df_meta = df_meta.merge(outra, left_on="Loja", right_on="Cidade", how="inner")
 ```
 
+| how   | Traz o quê              | Quando usar                   |
+| ----- | ----------------------- | ----------------------------- |
+| inner | só quem existe nos dois | padrão, mas esconde faltantes |
+| left  | tudo da esquerda        | **mais seguro para conferir** |
+| right | tudo da direita         | raro                          |
+| outer | tudo dos dois           | diagnóstico de diferença      |
 
+### **9. T — Série temporal**
 
+```python 
+df["Mes"] = df["Data"].dt.to_period("M")
+serie = df.groupby("Mes")["Faturamento"].sum()
+serie.plot(figsize=(12, 4))
 
+df["Mes"].dt.year
+df["Mes"].dt.month
+df["Mes"].dt.day
+df["Mes"].dt.dayofweek
+```
+
+### **10. L — Carregar e exportar**
+
+```python 
+df.to_csv("saida.csv", sep=";", index=False, encoding="utf-8-sig")
+df.to_excel("saida.xlsx", index=False)
+df.to_parquet("saida.parquet")
+df.to_sql("tabela", conexao, if_exists="replace", index=False)
+```
+
+encoding="utf-8-sig" é o que evita o Excel abrir com acento quebrado.
 
 ## Essencial
 
+**Sequência que funciona**
+
+
 ## Pegadinhas
+
+| Erro                           | Causa                | Correção                          |
+| ------------------------------ | -------------------- | --------------------------------- |
+| Colunas todas grudadas em uma  | separador errado     | sep=";"                           |
+| Acento virou símbolo           | encoding errado      | encoding="latin-1"                |
+| CEP perdeu o zero inicial      | leu como número      | dtype={"CEP": str}                |
+| Data não ordena                | ainda é texto        | pd.to_datetime                    |
+| SettingWithCopyWarning         | filtro sem .copy()   | df_filtrado = df[cond].copy()     |
+| groupby deu erro               | tentou somar texto   | selecione só as colunas numéricas |
+| Duplicata com datas diferentes | linha não é idêntica | drop_duplicates(subset=["ID"])    |
+| reset_index() sem efeito       | retornou cópia       | inplace=True ou reatribua         |
+| merge perdeu lojas             | inner escondeu       | how="left" para investigar        |
+| describe() não mostrou coluna  | dtype é object       | converter antes                   |
 
 ## Ver também
 - [[0. MOC Trilha Geral]]
