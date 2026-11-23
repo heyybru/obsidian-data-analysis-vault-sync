@@ -2,7 +2,7 @@ from pathlib import Path
 import shutil
 
 # ============ CONFIGURACAO ============
-SIMULAR = False      # True = so mostra | False = move de verdade
+SIMULAR = True      # True = so mostra | False = move de verdade
 
 # ============ LOCALIZAR O VAULT ============
 # Usa a pasta onde ESTE script esta salvo. Sem caminho digitado.
