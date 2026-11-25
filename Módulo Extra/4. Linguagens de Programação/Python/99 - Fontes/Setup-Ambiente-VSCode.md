@@ -14,7 +14,7 @@ Nota pronta para colar no Obsidian como 03-Referencias/Setup-Ambiente-Python.md.
 
 Antes de instalar qualquer coisa, veja o que já existe:
 
-```python
+```markdown
 python3 --version
 pip3 --version
 which python3 
@@ -41,7 +41,7 @@ Alternativa sem Homebrew: instalador em [python.org/downloads](https://www.pytho
 
 **Linux (Debian/Ubuntu):**
 
-```python 
+```markdown 
 sudo apt update
 sudo apt install python3 python3-pip python3-venv
 ```
@@ -50,23 +50,56 @@ sudo apt install python3 python3-pip python3-venv
 
 O venv isola as bibliotecas do projeto. Sem ele, instalações globais podem quebrar o sistema (externally-managed-environment).
 
+```markdown 
+mkdir -p ~/pos-engenharia-de-dados
+cd ~/pos-engenharia-de-dados
+python3 -m venv .venv
+```
+
 ### 1.4 Ativar e desativar
 
 **macOS / Linux:**
 
+```markdown 
+source .venv/bin/activate
+```
+
 **Windows (PowerShell):**
 
+```markdown 
+.venv\Scripts\Activate.ps1
+```
+
 O sinal de sucesso: o terminal mostra (.venv) no início da linha. Para sair:
+
+```markdown 
+deactivate
+```
 
 > [!warning] Sempre ative antes de instalar pip install fora do .venv ativa a proteção do sistema e falha com externally-managed-environment. Nunca use sudo pip.
 
 ### 1.5 Instalar as bibliotecas
 
+```markdown 
+pip install --upgrade pip
+pip install pandas numpy jupyter matplotlib seaborn
+```
+
 ### 1.6 Congelar dependências
 
 O requirements.txt é o que permite recriar o ambiente em outra máquina:
 
+```markdown 
+pip freeze > requirements.txt
+```
+
 Para restaurar:
+
+```markdown 
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 > [!tip] Congele só o essencial pip freeze registra tudo, inclusive dependências indiretas. Para um projeto limpo, mantenha um requirements.in com só o que você usa e gere o requirements.txt a partir dele.
 
@@ -103,7 +136,6 @@ Confirmação: no canto inferior direito aparece Python 3.x.x ('.venv'). Em note
 |Notebook não achou o kernel|Kernel não registrado|Select Kernel → .venv|
 
 ---
-
 ## 2. Problemas com o comando code no terminal
 
 ### 2.1 Por que acontece
