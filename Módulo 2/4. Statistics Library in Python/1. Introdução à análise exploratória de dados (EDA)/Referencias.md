@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Po%CC%81s-Analise%20e%20Engenharia%20de%20Dados&file=img%2FM%C3%B3dulo%202%2F3.%20Statistics%20Library%20in%20Python%2FIntrodu%C3%A7%C3%A3o%20%C3%A0%20an%C3%A1lise%20explorat%C3%B3ria%20de%20dados%20.pdf) 
