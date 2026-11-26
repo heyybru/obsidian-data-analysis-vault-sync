@@ -6,6 +6,7 @@ tags:
   - pandas
 atualizado: 2026-11-25
 ---
+---
 # Descomplica — notas de aula
 
 ## Arquivos recebidos
@@ -17,6 +18,7 @@ atualizado: 2026-11-25
 | Funcoes_no_pandas_.pdf | groupby, agg, apply, lambda, nlargest | 03.14 e 03.16 |
 | Introducao_a_analise_exploratoria_.pdf | EDA, describe, yfinance, Anaconda | 03.19 |
 
+---
 ## Observações
 
 - Cinco PDFs desta série têm nome fora do padrão. Ver [[Apostilas Hashtag - índice por módulo]] não — ver a tabela de nomes divergentes em [[MOC Trilha Geral]].
