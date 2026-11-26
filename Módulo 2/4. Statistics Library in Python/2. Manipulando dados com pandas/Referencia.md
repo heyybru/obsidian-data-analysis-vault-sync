@@ -1,0 +1,1 @@
+[material](obsidian://open?vault=Po%CC%81s-Analise%20e%20Engenharia%20de%20Dados&file=img%2FM%C3%B3dulo%202%2F3.%20Statistics%20Library%20in%20Python%2FManipulando%20dados%20com%20pandas%20.pdf) 

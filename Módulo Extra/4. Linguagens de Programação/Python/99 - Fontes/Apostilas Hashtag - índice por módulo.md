@@ -10,7 +10,6 @@ atualizado: 2026-11-19
 
 | Arquivo                                                 | Conteúdo | Virou nota |
 | ------------------------------------------------------- | -------- | ---------- |
-| [[Introdução à análise exploratória de dados .pdf]]]    |          | 01.01      |
 | [[0. Apostila Python Impressionador - Fundamentos.pdf]] |          | 01.01      |
 |                                                         |          |            |
 |                                                         |          |            |
