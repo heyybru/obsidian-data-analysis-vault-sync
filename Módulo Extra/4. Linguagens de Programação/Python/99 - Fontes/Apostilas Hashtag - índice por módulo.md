@@ -18,4 +18,4 @@ atualizado: 2026-11-19
 ---
 ## Observações
 
-- Cinco PDFs desta série têm nome fora do padrão. Ver [[Apostilas Hashtag - índice por módulo]] não — ver a tabela de nomes divergentes em [[MOC Trilha Geral]].
+- Os PDFs desta série têm nome fora do padrão. Ver [[Apostilas Hashtag - índice por módulo]] não — ver a tabela de nomes divergentes em [[MOC Trilha Geral]].
